@@ -1,4 +1,3 @@
-# COSPro2-1
 #include <stdio.h>
 
 
