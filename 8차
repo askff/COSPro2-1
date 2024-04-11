@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int num = 0; // 사용자로부터 입력받을 정수
+    int i = 0; // 반복문에서 사용될 변수 초기화
+    int sum = 0; // 합을 저장할 변수 초기화
+
+    // 사용자로부터 정수를 입력받음
+    printf("1-num까지의 합을 구하세요. num을 입력하세요: ");
+    scanf_s("%d", &num);
+    printf("\n\n\nfor문 이용\n\n\n");
+
+    // for문을 이용하여 합을 계산하고 중간 과정 출력
+    for (i = 1; i <= num; i++)
+    {
+        sum += i; // 합을 누적하여 계산
+        printf("%d + ", i); // 중간 과정 출력
+    }
+
+    printf("\b\b = %d\n\n\n", sum); // 마지막 항을 출력하고 + 지우기
+
+    printf("\n\n\nwhile문 이용\n\n\n");
+
+    // while문을 이용하여 합을 계산하고 중간 과정 출력
+    i = 1; // i 초기화
+    sum = 0; // sum 초기화
+    while (i <= num)
+    {
+        sum += i; // 합을 누적하여 계산
+        printf("%d + ", i); // 중간 과정 출력
+        i++; // 다음 항으로 이동
+    }
+
+    printf("\b\b = %d\n\n\n", sum); // 마지막 항을 출력하고 + 지우기
+
+    printf("\n\n\ndo while문 이용\n\n\n");
+
+    // do-while문을 이용하여 합을 계산하고 중간 과정 출력
+    i = 1; // i 초기화
+    sum = 0; // sum 초기화
+    do
+    {
+        sum += i; // 합을 누적하여 계산
+        printf("%d + ", i); // 중간 과정 출력
+        i++; // 다음 항으로 이동
+    } while (i <= num);
+
+    printf("\b\b = %d\n\n\n", sum); // 마지막 항을 출력하고 + 지우기
+
+    return 0;
+}
